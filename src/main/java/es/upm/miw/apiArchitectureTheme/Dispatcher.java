@@ -27,7 +27,8 @@ public class Dispatcher {
 		} 
 		else if ("users".equals(request.paths()[0]) && "search".equals(request.paths()[1])) {
 			try {
-				response.setBody(sportResource.getUsersPracticeSport().toString());
+				response.setBody(sportResource.getUsersPracticeSport(
+						request.paths()[1].split("=")[1]).toString());
 			} catch (Exception e) {
 				responseError(response, e);
 			}
