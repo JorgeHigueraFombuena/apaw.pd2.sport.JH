@@ -1,5 +1,7 @@
 package es.upm.miw.apiArchitectureTheme.daos.memory;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import es.upm.miw.apiArchitectureTheme.daos.UserDao;
@@ -8,52 +10,55 @@ import es.upm.miw.apiArchitectureTheme.entities.User;
 
 public class UserDaoMemory extends GenericMemoryDao<User> implements UserDao {
 
+	public UserDaoMemory(){
+		super.setMap(new HashMap<Integer,User>());
+	}
+	
 	@Override
 	public void create(User entity) {
-		// TODO Auto-generated method stub
-
+		super.create(entity);
 	}
 
 	@Override
 	public User read(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return super.read(id);
 	}
 
 	@Override
 	public void update(User entity) {
-		// TODO Auto-generated method stub
-
+		super.update(entity);
 	}
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
-
+		super.deleteById(id);
 	}
 
 	@Override
 	public List<User> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return super.findAll();
 	}
 
 	@Override
 	public List<User> findUserBySport(Sport sport) {
-		// TODO Auto-generated method stub
-		return null;
+		List<User> users = findAll();
+		List<User> result = new ArrayList<User>();
+		for(User user : users){
+			if(user.hasSport(sport)){
+				result.add(user);
+			}
+		}
+		return result;
 	}
 
 	@Override
 	protected Integer getId(User entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return entity.getId();
 	}
 
 	@Override
 	protected void setId(User entity, Integer id) {
-		// TODO Auto-generated method stub
-		
+		entity.setId(id);
 	}
 
 }
