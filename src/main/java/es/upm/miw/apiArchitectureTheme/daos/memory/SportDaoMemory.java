@@ -1,5 +1,6 @@
 package es.upm.miw.apiArchitectureTheme.daos.memory;
 
+import java.util.HashMap;
 import java.util.List;
 
 import es.upm.miw.apiArchitectureTheme.daos.SportDao;
@@ -7,47 +8,44 @@ import es.upm.miw.apiArchitectureTheme.entities.Sport;
 
 public class SportDaoMemory extends GenericMemoryDao<Sport> implements SportDao {
 
+	public SportDaoMemory(){
+		super.setMap(new HashMap<Integer,Sport>());
+	}
+	
 	@Override
 	public void create(Sport entity) {
-		// TODO Auto-generated method stub
-
+		super.create(entity);
 	}
 
 	@Override
 	public Sport read(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return super.read(id);
 	}
 
 	@Override
 	public void update(Sport entity) {
-		// TODO Auto-generated method stub
-
+		super.update(entity);
 	}
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
-
+		super.deleteById(id);
 	}
 
 	@Override
 	public List<Sport> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return super.findAll();
 	}
 
 
 	@Override
 	protected Integer getId(Sport entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return entity.getId();
 	}
 
 	@Override
 	protected void setId(Sport entity, Integer id) {
-		// TODO Auto-generated method stub
-		
+		entity.setId(id);
 	}
 
 }
