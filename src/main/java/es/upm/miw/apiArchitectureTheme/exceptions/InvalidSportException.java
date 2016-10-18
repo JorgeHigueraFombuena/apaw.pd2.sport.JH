@@ -4,7 +4,7 @@ public class InvalidSportException extends Exception {
 	
 	private static final long serialVersionUID = 5580286377402433975L;
 
-	public static final String DESCRIPTION = "Petición no implementada";
+	public static final String DESCRIPTION = "Deporte inexistente";
 
 	public InvalidSportException(String detail) {
 		super(DESCRIPTION + ". " + detail);
