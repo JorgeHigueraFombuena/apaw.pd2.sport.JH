@@ -69,7 +69,7 @@ public class Dispatcher {
 			try {
 				String nick = request.paths()[1];
 				String sport = request.getBody();
-				userResource.addSport(nick, sport);
+				userResource.putSportToUser(nick, sport);
 			} catch (InvalidSportException e){
 				responseError(response, e);
 			}
