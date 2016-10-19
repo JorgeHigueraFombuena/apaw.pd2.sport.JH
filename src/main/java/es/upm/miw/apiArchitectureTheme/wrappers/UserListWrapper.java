@@ -30,4 +30,12 @@ public class UserListWrapper {
 		}
 		return result.substring(0, result.length() - 1) + "]";
 	}
+	
+	public String getNicksFormated(){
+		String result = "{\"userList\":[";
+		for(UserWrapper userWrapper : userList){
+			result += "{\"nick\":\"" + userWrapper.getNick() + "\"},";
+		}
+		return result.substring(0, result.length() - 1) + "]";
+	}
 }

@@ -2,10 +2,8 @@ package es.upm.miw.apiArchitectureTheme.api;
 
 import es.upm.miw.apiArchitectureTheme.controllers.SportController;
 import es.upm.miw.apiArchitectureTheme.exceptions.SportAlreadyExistsException;
-import es.upm.miw.apiArchitectureTheme.exceptions.SportNotExistsException;
 import es.upm.miw.apiArchitectureTheme.wrappers.SportListWrapper;
 import es.upm.miw.apiArchitectureTheme.wrappers.SportWrapper;
-import es.upm.miw.apiArchitectureTheme.wrappers.UserListWrapper;
 
 public class SportResource {
 

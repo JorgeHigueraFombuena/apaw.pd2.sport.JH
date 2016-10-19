@@ -1,10 +1,8 @@
 package es.upm.miw.apiArchitectureTheme.api;
 
-import es.upm.miw.apiArchitectureTheme.controllers.SportController;
 import es.upm.miw.apiArchitectureTheme.controllers.UserController;
 import es.upm.miw.apiArchitectureTheme.exceptions.InvalidSportException;
 import es.upm.miw.apiArchitectureTheme.exceptions.NickAlreadyExistsException;
-import es.upm.miw.apiArchitectureTheme.exceptions.SportAlreadyExistsException;
 import es.upm.miw.apiArchitectureTheme.exceptions.SportNotExistsException;
 import es.upm.miw.apiArchitectureTheme.wrappers.SportWrapper;
 import es.upm.miw.apiArchitectureTheme.wrappers.UserListWrapper;

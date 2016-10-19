@@ -1,7 +1,5 @@
 package es.upm.miw.apiArchitectureTheme.entities;
 
-import es.upm.miw.apiArchitectureTheme.wrappers.SportWrapper;
-
 public class Sport {
 	
 	private int id;

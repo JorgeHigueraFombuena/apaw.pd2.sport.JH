@@ -6,7 +6,6 @@ import es.upm.miw.apiArchitectureTheme.daos.DaoFactory;
 import es.upm.miw.apiArchitectureTheme.entities.Sport;
 import es.upm.miw.apiArchitectureTheme.wrappers.SportListWrapper;
 import es.upm.miw.apiArchitectureTheme.wrappers.SportWrapper;
-import es.upm.miw.apiArchitectureTheme.wrappers.UserListWrapper;
 
 public class SportController {
 

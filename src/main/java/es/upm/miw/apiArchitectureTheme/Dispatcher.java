@@ -28,7 +28,7 @@ public class Dispatcher {
 		else if ("users".equals(request.paths()[0]) && request.paths()[1].contains("search")) {
 			try {
 				response.setBody(userResource.getUsersPracticeSport(
-						request.paths()[1].split("=")[1]).toString());
+						request.paths()[1].split("=")[1]).getNicksFormated());
 			} catch (Exception e) {
 				responseError(response, e);
 			}
