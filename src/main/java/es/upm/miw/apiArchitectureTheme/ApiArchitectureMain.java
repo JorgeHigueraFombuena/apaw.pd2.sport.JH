@@ -56,8 +56,24 @@ public class ApiArchitectureMain {
 		request.setBody("tenis");
 		this.request();
 		
+		request.setBody("noDeporte");
+		this.request();
+		
+		request.setPath("users/dos/sport");
+		request.setBody("tenis");
+		this.request();
+		
+		request.setBody("ajedrez");
+		this.request();
+		
+		request.setMethod(HttpMethod.GET);
+		request.setPath("users/search?sport=tenis");
+		request.clearQueryParams();
+		request.setBody("");
+		this.request();
+		
 		request.setMethod(HttpMethod.POST);
-		request.setPath("");
+		request.setPath("noPath");
 		request.setBody("");
 		this.request();
 	}

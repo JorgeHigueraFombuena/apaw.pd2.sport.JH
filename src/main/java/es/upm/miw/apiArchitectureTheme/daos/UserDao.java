@@ -9,4 +9,6 @@ public interface UserDao extends GenericDao<User, Integer> {
 
 	List<User> findUserBySport(Sport sport);
 	
+	User findUserByNick(String nick);
+	
 }

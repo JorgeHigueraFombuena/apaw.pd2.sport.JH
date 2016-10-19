@@ -1,8 +1,11 @@
 package es.upm.miw.apiArchitectureTheme.api;
 
+import es.upm.miw.apiArchitectureTheme.controllers.SportController;
 import es.upm.miw.apiArchitectureTheme.controllers.UserController;
 import es.upm.miw.apiArchitectureTheme.exceptions.InvalidSportException;
 import es.upm.miw.apiArchitectureTheme.exceptions.NickAlreadyExistsException;
+import es.upm.miw.apiArchitectureTheme.exceptions.SportAlreadyExistsException;
+import es.upm.miw.apiArchitectureTheme.exceptions.SportNotExistsException;
 import es.upm.miw.apiArchitectureTheme.wrappers.SportWrapper;
 import es.upm.miw.apiArchitectureTheme.wrappers.UserListWrapper;
 import es.upm.miw.apiArchitectureTheme.wrappers.UserWrapper;
@@ -27,6 +30,13 @@ public class UserResource {
 		}
 		new UserController().putSportToUser(new UserWrapper(nick,null),
 				new SportWrapper(sport));
+	}
+	
+	public UserListWrapper getUsersPracticeSport(String sport) throws SportNotExistsException {
+		if(new SportResource().sportList().contains(new SportWrapper(sport))){
+			return new UserController().getUsersPracticeSport(new SportWrapper(sport));
+		}
+		throw new SportNotExistsException(sport);
 	}
 
 }

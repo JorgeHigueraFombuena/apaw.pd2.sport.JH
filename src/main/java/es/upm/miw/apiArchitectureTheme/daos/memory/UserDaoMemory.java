@@ -61,4 +61,20 @@ public class UserDaoMemory extends GenericMemoryDao<User> implements UserDao {
 		entity.setId(id);
 	}
 
+	@Override
+	public User findUserByNick(String nick) {
+		User user = null;
+		List<User> users = findAll();
+		int i = 0;
+		boolean found = false;
+		while(!found && i < users.size()){
+			if(users.get(i).getNick().equals(nick)){
+				found = true;
+				user = users.get(i);
+			}
+			i++;
+		}
+		return user;
+	}
+
 }

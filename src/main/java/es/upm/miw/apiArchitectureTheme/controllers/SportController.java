@@ -10,10 +10,6 @@ import es.upm.miw.apiArchitectureTheme.wrappers.UserListWrapper;
 
 public class SportController {
 
-	public UserListWrapper getUsersPracticeSport(SportWrapper sport) {
-		return null;
-	}
-
 	public void createSport(SportWrapper sportWrapper) {
 		DaoFactory.getFactory().getSportDao().create(new Sport(sportWrapper.getName()));
 	}

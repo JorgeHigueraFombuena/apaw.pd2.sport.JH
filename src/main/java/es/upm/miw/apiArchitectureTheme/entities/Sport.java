@@ -35,8 +35,8 @@ public class Sport {
 	
 	@Override
 	public boolean equals(Object o){
-		return o instanceof SportWrapper
-				&& ((SportWrapper)o).getName().equals(name);
+		return o instanceof Sport
+				&& ((Sport)o).getName().equals(name);
 	}
 	
 }

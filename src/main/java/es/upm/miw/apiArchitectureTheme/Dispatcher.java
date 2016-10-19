@@ -25,9 +25,9 @@ public class Dispatcher {
 			response.setBody(userResource.userList().toString());
 			// **/ users/search?sport=*
 		} 
-		else if ("users".equals(request.paths()[0]) && "search".equals(request.paths()[1])) {
+		else if ("users".equals(request.paths()[0]) && request.paths()[1].contains("search")) {
 			try {
-				response.setBody(sportResource.getUsersPracticeSport(
+				response.setBody(userResource.getUsersPracticeSport(
 						request.paths()[1].split("=")[1]).toString());
 			} catch (Exception e) {
 				responseError(response, e);
